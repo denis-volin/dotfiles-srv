@@ -1,0 +1,67 @@
+# Setup shell
+set shell zsh
+set shellopts '-eu:--shwordsplit'
+set ifs "\n"
+
+# Other options
+set incsearch
+
+# Functions
+cmd ownership %stat --format="%A %U:%G" $f
+
+cmd mkdir %{{
+  printf " mkdir "
+  read dir
+  mkdir -pv $dir
+}}
+
+cmd mkfile ${{
+  printf " $EDITOR "
+  read file
+  $EDITOR $file
+}}
+
+cmd chmod %{{
+  printf " chmod "
+  read bits
+
+  for file in "$fx"
+  do
+    chmod $bits $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+cmd chown %{{
+  printf " chown "
+  read own
+
+  for file in "$fx"
+  do
+    chown $own $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+# Mappings
+map D delete
+
+map gr cd /
+map gd cd /dev
+map ge cd /etc
+map gm cd /mnt
+map gs cd /srv
+map gt cd /tmp
+map gu cd /usr
+map gv cd /var
+
+map zo ownership
+map zp set preview!
+
+map m
+map md mkdir
+map mf mkfile
+map mm chmod
+map mo chown

@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+# Always use neovim
+alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and interactivity settings
+alias \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  rm="rm -vI" \
+  ln="ln -v"  \
+  mkd="mkdir -pv" \
+
+# Colorize commands when possible
+alias \
+  ls="ls -hN --color=auto --group-directories-first" \
+  ll="ls -lAhN --color=auto --group-directories-first" \
+  grep="grep --color=auto" \
+
+# Common commands abbreviation
+alias \
+  e="$EDITOR" \
+  S="systemctl" \
+  sS="sudo systemctl" \
+  J="journalctl" \
+  sJ="sudo journalctl" \
+  h="history -i -100000 | less +G" \
+  hs="history -i -100000 | grep" \
+
+# Other
+alias dotfiles="git --git-dir=$HOME/.config/dotfiles-srv.git/ --work-tree=$HOME"
