@@ -58,5 +58,9 @@ function man() {
 		man "$@"
 }
 
+# Bindings
+bindkey -s '^r' 'sudo su -l\r'
+bindkey -s '^f' 'lf\r'
+
 # Load syntax highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
