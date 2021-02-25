@@ -60,7 +60,7 @@ function man() {
 
 # Bindings
 bindkey -s '^o' 'sudo su -l\r'
-bindkey -s '^i' 'exit\r'
+bindkey -s '^p' 'exit\r'
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
