@@ -45,6 +45,7 @@ cmd chown %{{
 
 # Mappings
 map D delete
+map <esc> reload
 
 map gr cd /
 map gd cd /dev

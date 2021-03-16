@@ -1,6 +1,6 @@
-autoload -U colors && colors  # Load colors    
-setopt autocd                 # Automatically cd into typed directory    
-stty stop undef               # Disable ctrl-s to freeze terminal    
+autoload -U colors && colors  # Load colors
+setopt autocd                 # Automatically cd into typed directory
+stty stop undef               # Disable ctrl-s to freeze terminal
 source "$ZDOTDIR/aliases"     # Load aliases
 
 # Change prompt
@@ -11,10 +11,10 @@ source "$ZDOTDIR/aliases"     # Load aliases
 # History settings
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits
-setopt SHARE_HISTORY             # Share history between all sessions
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate
-setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space
+setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits
+setopt SHARE_HISTORY          # Share history between all sessions
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate
+setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space
 
 # Search in history while typing
 autoload -U history-search-end
@@ -34,19 +34,19 @@ _comp_options+=(globdots)
 
 # vi mode
 bindkey -v
-export KEYTIMEOUT=5
+export KEYTIMEOUT=1
 
-# Use lf to switch directories and bind it to ctrl-o                                     
-lfcd () {                                                                                
-    tmp="$(mktemp)"                                                                      
-    lf -last-dir-path="$tmp" "$@"                                                        
-    if [ -f "$tmp" ]; then                                                               
-        dir="$(cat "$tmp")"                                                              
-        rm -f "$tmp" >/dev/null                                                          
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"                             
-    fi                                                                                   
-}                                                                                        
-bindkey -s '^o' 'lfcd\n'
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\r'
 
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
