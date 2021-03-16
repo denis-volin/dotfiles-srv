@@ -7,8 +7,6 @@ set ifs "\n"
 set incsearch
 
 # Functions
-cmd ownership %stat --format="%A %U:%G" $f
-
 cmd mkdir %{{
   printf " mkdir "
   read dir
@@ -57,7 +55,6 @@ map gt cd /tmp
 map gu cd /usr
 map gv cd /var
 
-map zo ownership
 map zp set preview!
 
 map m
