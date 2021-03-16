@@ -3,18 +3,16 @@
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="nvim"
 
-# ~/ Clean-up
+# Move stuff from $HOME
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-
-export HISTFILE="$HOME/.local/share/zsh-history"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export LESSHISTFILE="-"
 export MYSQL_HISTFILE="/dev/null"
 
-export ZDOTDIR="$HOME/.config/zsh"
-
-# Less syntax highlighting
+# `less` syntax highlighting
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 export LESS=' -R '
 
