@@ -43,6 +43,10 @@ cmd chown %{{
   lf -remote 'send reload'
 }}
 
+cmd dirinfo %{{
+  printf " Size: $(du -sh $f | cut -f 1). Files: $(find $f | wc -l)"
+}}
+
 # Mappings
 map D delete
 map <esc> reload
@@ -56,6 +60,7 @@ map gt cd /tmp
 map gu cd /usr
 map gv cd /var
 
+map zi dirinfo
 map zp set preview!
 
 map m
