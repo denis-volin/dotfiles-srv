@@ -25,6 +25,7 @@ alias                                                   \
 # Common commands abbreviation
 alias                               \
   e="$EDITOR"                       \
+  E="sudo $EDITOR"                  \
   ka="killall"                      \
   p="ping"                          \
   S="systemctl"                     \
