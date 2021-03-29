@@ -26,6 +26,8 @@ alias                                                   \
 alias                               \
   e="$EDITOR"                       \
   E="sudo $EDITOR"                  \
+  s="sudo su -l"                    \
+  q="exit"                          \
   ka="killall"                      \
   p="ping"                          \
   S="systemctl"                     \
