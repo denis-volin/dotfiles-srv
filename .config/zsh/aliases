@@ -7,12 +7,13 @@ alias vim="nvim" vimdiff="nvim -d"
 alias dotfiles="git --git-dir=$HOME/.config/dotfiles-srv.git/ --work-tree=$HOME"
 
 # Verbosity and interactivity settings
-alias              \
-  cp="cp -iv"      \
-  mv="mv -iv"      \
-  rm="rm -vI"      \
-  ln="ln -v"       \
-  mkd="mkdir -pv"  \
+alias                \
+  cp="cp -iv"        \
+  mv="mv -iv"        \
+  rm="rm -vI"        \
+  ln="ln -v"         \
+  mkd="mkdir -pv"    \
+  rsync="rsync -hP"  \
 
 # Colorize commands when possible
 alias                                                   \
