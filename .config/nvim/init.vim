@@ -8,6 +8,7 @@ endif
 call plug#begin(stdpath('data') . '/plugged')
   Plug 'dracula/vim'
   Plug 'vim-scripts/AutoComplPop'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
 " General settings
