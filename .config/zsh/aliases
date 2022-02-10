@@ -35,5 +35,5 @@ alias                               \
   sS="sudo systemctl"               \
   J="journalctl"                    \
   sJ="sudo journalctl"              \
-  h="history -i -100000 | less +G"  \
-  hs="history -i -100000 | grep"    \
+  h="history -100000 | less +G"  \
+  hs="history -100000 | grep"    \
