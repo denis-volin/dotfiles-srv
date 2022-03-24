@@ -84,4 +84,4 @@ function man() {
 }
 
 # Load syntax highlighting (should be last)
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.local/share/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 
